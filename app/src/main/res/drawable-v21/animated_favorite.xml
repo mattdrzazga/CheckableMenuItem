@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/stateUnchecked"
+        android:drawable="@drawable/ic_favorite_border_black_24dp"
+        android:state_checked="false" />
+
+    <item
+        android:id="@+id/stateChecked"
+        android:drawable="@drawable/ic_favorite_black_24dp"
+        android:state_checked="true" />
+
+    <transition
+        android:drawable="@drawable/empty_to_fill_avd_anim"
+        android:fromId="@id/stateUnchecked"
+        android:toId="@id/stateChecked" />
+
+    <transition
+        android:drawable="@drawable/fill_to_empty_avd_anim"
+        android:fromId="@id/stateChecked"
+        android:toId="@id/stateUnchecked" />
+
+</animated-selector>
